@@ -286,8 +286,7 @@ structure Elab : ELAB = struct
 
   and convertDec conversionInfo dec =
       case dec of
-          Ast.AbsDec strbs => AbsDec (List.map (convertStrb conversionInfo) strbs)
-        | Ast.AbstypeDec
+          Ast.AbstypeDec
             { abstycs : Ast.db list, body : Ast.dec, withtycs : Ast.tb list } =>
             AbstypeDec
               { abstycs = List.map (convertDb conversionInfo) abstycs
@@ -329,9 +328,7 @@ structure Elab : ELAB = struct
               LocalDec (convertDec conversionInfo d1, convertDec conversionInfo d2)
             end
         | Ast.OpenDec paths => OpenDec paths
-        | Ast.OvldDec (symbol, ty, exps) =>
-            OvldDec
-              (symbol, convertTy conversionInfo ty, List.map (convertExp conversionInfo) exps)
+        | Ast.OvldDec (symbol, exps) => raise Fail "Not available in external language"
         | Ast.SeqDec decs => SeqDec (List.map (convertDec conversionInfo) decs)
         | Ast.SigDec sigbs => SigDec (List.map (convertSigb conversionInfo) sigbs)
         | Ast.StrDec strbs => StrDec (List.map (convertStrb conversionInfo) strbs)

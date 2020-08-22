@@ -1,0 +1,3 @@
+[submodule "prettyprinter-sml"]
+	path = prettyprinter-sml
+	url = git@github.com:tkadur/prettyprinter-sml.git

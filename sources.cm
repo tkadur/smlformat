@@ -12,6 +12,8 @@ is
       $smlnj/viscomp/parser.cm
       $smlnj/viscomp/basics.cm
 
+      prettyprinter-sml/sources.cm
+
       lib/lib.sml
       lib/Fixities.sml
       lib/Fixities.sig
