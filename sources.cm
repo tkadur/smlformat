@@ -15,28 +15,24 @@ is
       prettyprinter-sml/sources.cm
 
       lib/lib.sml
-      lib/Fixities.sml
-      lib/Fixities.sig
-#if SMLNJ_MINOR_VERSION >= 83
-      lib/ExtractLiteral.sml
-#else
-      lib/ExtractLiteralOld.sml
-#endif
+      lib/fixities.sml
+      lib/fixities.sig
+      lib/extract_literal.sml
 
-      parser/CommentParser.sml
-      parser/CommentParser.sig
+      parser/comment_parser.sml
+      parser/comment_parser.sig
 
-      parser/FixityParser.sml
-      parser/FixityParser.sig
+      parser/fixity_parser.sml
+      parser/fixity_parser.sig
 
-      elab/ElabAst.sml
-      elab/ElabAst.sig
+      elab/elab_ast.sml
+      elab/elab_ast.sig
 
-      elab/Elab.sml
-      elab/Elab.sig
+      elab/elab.sml
+      elab/elab.sig
 
-      format/Format.sml
-      format/Format.sig
+      format/format.sml
+      format/format.sig
 
-      main/SmlFormat.sml
-      main/SmlFormat.sig
+      main/sml_format.sml
+      main/sml_format.sig
